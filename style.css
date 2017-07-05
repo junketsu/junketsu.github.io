@@ -62,7 +62,7 @@ button{
 }
 
 #plusButton button{
-    background-color: lightblue;
+    background-color: red;
 }
 #minusButton button{
     background-color: lightcoral;
