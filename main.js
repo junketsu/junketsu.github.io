@@ -8,7 +8,8 @@ window.onload = function() {
         radius = (width*Math.PI/66) * 0.9 - 5,
         ihvan = [],
         ihvanOut = [],
-        counterLabel = document.getElementById("counterLabel");
+        counterLabel = document.getElementById("counterLabel"),
+        hesapLabel = document.getElementById("hesapLabel");
 
     for(var i = 0; i < numCemaat; i++) {
         ihvan.push(particle.create(0, 0, 0, 0, 0));
@@ -20,6 +21,7 @@ window.onload = function() {
         if(event.keyCode == 38 && numCemaat < 33) {     //UP
             numCemaat++;
             counterLabel.innerHTML = numCemaat;
+            hesapLabel.innerHTML = hatimHesap(numCemaat);
             if(ihvanOut.length > 0) {
                 ihvan.splice(randomIndex, 0, ihvanOut.pop());
             }
@@ -33,10 +35,10 @@ window.onload = function() {
             ihvanOut.push(ihvan.splice(randomIndex, 1)[0]);
             numCemaat--;
             counterLabel.innerHTML = numCemaat;
+            hesapLabel.innerHTML = hatimHesap(numCemaat);
         }
     });
     document.body.addEventListener("keyup",function(event) {
-       //console.log(event.keyCode);
         
     });
         
@@ -84,7 +86,6 @@ window.onload = function() {
         //animation ihvan going out
         for(var k = 0; k < ihvanOut.length; k++) {
             ihvanOut[k].update();
-            console.log(k);
             if(ihvanOut[k].position.getX() + radius < 0 || ihvanOut[k].position.getX() - radius > width 
               || ihvanOut[k].position.getY() + radius < 0 || ihvanOut[k].position.getY() - radius > height) {
                 
@@ -93,3 +94,18 @@ window.onload = function() {
         }   
     }
 }
+
+function hatimHesap(num){
+    var mod = 100 % num;
+    if(mod == 0){ return ("herkes " + 100/num)}
+    var cem = num - mod; 
+    if(cem <= mod){
+        return (cem + " kisi " + Math.floor(100/num) + " digerleri " + (Math.floor(100/num)+1));
+    }
+    else{
+        return (mod + " kisi " + (Math.floor(100/num)+1) + " digerleri " + Math.floor(100/num));
+        
+    }
+    
+}
+

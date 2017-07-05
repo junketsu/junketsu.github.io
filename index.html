@@ -1,24 +1,29 @@
 <html>
     <head>
         <meta name="apple-mobile-web-app-capable" content="yes">
-        
+
         <link rel="stylesheet" href="style.css">
-        
+
         <script type="text/javascript" src="vector.js"></script>
         <script type="text/javascript" src="particle.js"></script>
         <script type="text/javascript" src="main.js"></script>
     </head>
     <body>
         <canvas id="canvas"></canvas>
-        <div id="bar">
-            <div id="minusButton">
-                <button type="button">-</button>
+        <div class="container">
+            <div class="bar">
+                <div class="buttons" id="minusButton">
+                    <button type="button">-</button>
+                </div>
+                <div class="buttons" id="plusButton">
+                    <button type="button">+</button>
+                </div>
+                <div id="labeldiv">
+                    <h1 id="counterLabel">10</h1>
+                </div>
             </div>
-            <div id="plusButton">
-                <button type="button">+</button>
-            </div>
-            <div id="labeldiv">
-                <h1 id="counterLabel">10</h1>
+            <div class="hesap">
+                <h1 id="hesapLabel">herkez 10</h1>
             </div>
         </div>
     </body>
