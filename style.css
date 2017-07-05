@@ -49,12 +49,12 @@ canvas{
     text-align: center;
 }
 h1{
-    font-size: 400%;
+    font-size: 200%;
     border: none;
 }
 button{ 
     border-radius: 30%;
-    font-size: 1000%;
+    font-size: 400%;
     width: 100%;  
     text-align: center; 
     margin: 0;
