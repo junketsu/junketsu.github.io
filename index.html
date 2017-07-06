@@ -1,8 +1,12 @@
 <html>
     <head>
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="viewport" 
+              content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
         <link rel="stylesheet" href="style.css">
 
         <script type="text/javascript" src="vector.js"></script>
@@ -14,10 +18,10 @@
         <div class="container">
             <div class="bar">
                 <div class="buttons" id="minusButton">
-                    <button type="button">-</button>
+                    <button type="button" id="minbtn">-</button>
                 </div>
                 <div class="buttons" id="plusButton">
-                    <button type="button">+</button>
+                    <button type="button" id="plsbtn">+</button>
                 </div>
                 <div id="labeldiv">
                     <h1 id="counterLabel">15</h1>
