@@ -15,13 +15,10 @@ window.onload = function() {
         ihvan.push(particle.create(0, 0, 0, 0, 0));
     }
 
-    
-    $("plsbtn").on("tap", plusButtonPressed);
-    /*
+
     document.getElementById("plusButton").addEventListener("click", plusButtonPressed);
     
     document.getElementById("minusButton").addEventListener("click", minusButtonPressed);
-    */
     
 
     update();
