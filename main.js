@@ -4,7 +4,7 @@ window.onload = function() {
         width = canvas.width = window.innerWidth,
         height = canvas.height= window.innerHeight,
         halkaCenter = vector.create(width/2, width/2),
-        numCemaat = 10,
+        numCemaat = 15,
         radius = (width*Math.PI/66) * 0.9 - 5,
         ihvan = [],
         ihvanOut = [],
