@@ -1,75 +1,93 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar">
-  <head>
-    <title>Random Questions</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Scheherazade New", serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-        overflow: hidden;
-      }
-      .question-box {
-        background-color: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        max-width: 80%;
-        min-height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        cursor: pointer;
-        transition: transform 0.2s;
-        user-select: none;
-        font-size: 40px;
-        line-height: 1.6;
-        direction: rtl;
-      }
-      .question-box:hover {
-        transform: scale(1.02);
-      }
-      .question-box:active {
-        transform: scale(0.98);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="question-box" id="questionBox">انقر أو المس للبدء</div>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kulturfest</title>
 
-    <script src="questions.js"></script>
-    <script>
-      const questionBox = document.getElementById("questionBox");
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-      function getRandomQuestion() {
-        return questions[Math.floor(Math.random() * questions.length)];
-      }
+    .container {
+      width: 90%;
+      max-width: 500px;
+      padding: 30px;
+    }
 
-      function showNewQuestion() {
-        questionBox.textContent = getRandomQuestion();
-      }
+    h1 {
+      margin-bottom: 10px;
+      font-size: 32px;
+      color: #cdda00;
+    }
 
-      questionBox.addEventListener("click", showNewQuestion);
-      questionBox.addEventListener("touchend", function (e) {
-        e.preventDefault();
-        showNewQuestion();
-      });
+    p {
+      margin-bottom: 35px;
+      color: #ccc;
+      font-size: 18px;
+    }
 
-      // Show first question on load
-      if (questions.length > 0) {
-        showNewQuestion();
-      }
-    </script>
-  </body>
+    .button {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      margin: 15px 0;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: 0.2s ease;
+      box-sizing: border-box;
+    }
+
+    .menu-button {
+      background: #cdda00;
+      color: #111;
+    }
+
+    .feedback-button {
+      background: #6ed0e0;
+      color: #111;
+    }
+
+    .button:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Kulturfest</h1>
+    <p>Willkommen! Bitte wähle eine Option aus.</p>
+
+    <a class="button menu-button" href="kermes menü.pdf" target="_blank">
+      Speisekarte / Menü
+    </a>
+
+    <a class="button feedback-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeEfszcg9w7xDyXyicf3DloeW8O1r2zGxUCEoG0ALvsz9YupQ/viewform?usp=dialog" target="_blank">
+      Feedback
+    </a>
+
+    <div class="footer">
+      Sindelfingen Hisar Camii Üniversitesi Yurdu
+    </div>
+  </div>
+</body>
 </html>
